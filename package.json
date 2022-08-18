@@ -1,13 +1,13 @@
 {
-  "name": "layon.db",
+  "name": "yunaz.db",
   "version": "1.0.0",
-  "description": "Basit Bir Database Modülü ",
-  "main": "./src/layondb.js",
+  "description": "Basit bir database modülü",
+  "main": "./src/yunazdb.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Layona-x",
+  "author": "YunusDEV",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.0.6",
