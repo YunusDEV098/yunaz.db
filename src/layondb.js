@@ -1,7 +1,7 @@
 const fs = require('fs')
     class DB{  
     constructor(filePath){
-        this.jsonFilePath = filePath || "./layondb/database.json";
+        this.jsonFilePath = filePath || "./yunazdb/database.json";
         this.data = {};
         if(!fs.existsSync(this.jsonFilePath)){
             fs.writeFileSync(this.jsonFilePath, "{}", "utf-8");
@@ -16,24 +16,24 @@ const fs = require('fs')
     fs.writeFileSync(this.jsonFilePath, JSON.stringify(this.data, null, 2), "utf-8")
     }
     add(key,value){
-      const data = JSON.parse(fs.readFileSync('./layondb/database.json','utf-8'))
-      data[key] = value; fs.writeFileSync('./layondb/database.json',JSON.stringify(data,null,2))
+      const data = JSON.parse(fs.readFileSync('./yunazdb/database.json','utf-8'))
+      data[key] = value; fs.writeFileSync('./yunazdb/database.json',JSON.stringify(data,null,2))
     }
   fetch(key){
-    const data = JSON.parse(fs.readFileSync('./layondb/database.json','utf-8'))
+    const data = JSON.parse(fs.readFileSync('./yunazdb/database.json','utf-8'))
     if(!data[key]) throw new TypeError("Datada Böyle Bir Değer Bulunamadı")
    return data[key]
   }
   delete(key){
-    const data = JSON.parse(fs.readFileSync('./layondb/database.json','utf-8'))
+    const data = JSON.parse(fs.readFileSync('./yunazdb/database.json','utf-8'))
    /// if(!data[key])
     // throw new TypeError("Datada Böyle Bir Değer Bulunamadı")
      delete data[key]
       return 
-fs.writeFileSync('./layondb/database.json',JSON.stringify(data,null,2))
+fs.writeFileSync('./yunazdb/database.json',JSON.stringify(data,null,2))
   }
   has(key){
-        const data = JSON.parse(fs.readFileSync('./layondb/database.json','utf-8'))
+        const data = JSON.parse(fs.readFileSync('./yunazdb/database.json','utf-8'))
     return data[key] ? true : false  
   }
   math(data,op,data1){
