@@ -1,59 +1,62 @@
-# Kurulum 
+# Kurulum
 ```js
-const db = require('layon.db')
+npm i yunaz.db
+
+index.js Main dosyasınız isimi neyse onun içine verdiğim şeyi ekleyin
+
+const db = require('yunaz.db')
 ```
 
-#Dosya Kurulum 
+# Dosya Kurulumu 
 ```js
-layondb Adlı Bir Klasör Oluşturunuz Ardından İçine database.json Adlı Bir Dosya Oluşturun Sonra Bu Dosyasının İçine {} Şu İşareti Atın Ve Hazir!
+yunazdb Adlı bir Kklasör oluşturunuz ardından içine database.json adlı bir dosya oluşturun sonra bu dosyasının içine {} şu işareti atın ve hazır!
 ```
 
 # Database Ekleme Yapma
 ```js
-const db = require('layon.db')
-db.add("zero","hero")
+const db = require('yunaz.db')
+db.add("İsim","Değer")
 
 Burda Yazılacak Şey
-
 {
-  "zero":"hero"
+  "İsim":"Değer"
 }
 ```
 
 # Databaseten Veri Çekme
 ```js
-const db = require('layon.db')
-let layona = db.fetch("zero")
-console.log(layona)
+const db = require('yunaz.db')
+let yunaz = db.fetch("İsim")
+console.log(yunaz)
 
-Az Önce  Eklediğimiz Veri zero ve değeri hero Bizim Konsolumuza Burda hero değeri dönecektir 
+Az önce eklediğimiz veri İsim ve değeri Değer bizim konsolumuza burda Değer değeri dönecektir.
 ```
 
 # Databaseten Veri Silme
 ```js
-const db = require('layon.db')
-db.delete("zero")
+const db = require('yunaz.db')
+db.delete("İsim")
 
 
-Az Önce  Eklediğimiz Veri zero ve değeri hero Burda Bunlar Silinecektir ve Databaseinizde Başka Bir Veri Bulunmuyorsa {} database.json dosyamız böyle gözükecektir 
+Az önce  eklediğimiz veri İsim ve değeri Değer burda bunlar ailinecektir ve databaseinizde başka bir veri bhlunmuyorsa {} database.json dosyamız böyle gözükecektir 
 ```
 
 # Databasete Veri Olup Olmadığını Kontrol Etme
 ```js
-const db = require('layon.db')
-db.has("zero")
+const db = require('yunaz.db')
+db.has("İsim")
 
-Burda Değerimiz Buluyorsa true bulunmuyorsa false değerini döndürecektir az önce sildigimiz için false döndürecektir 
+Burda değerimiz buluyorsa true bulunmuyorsa false değerini döndürecektir az önce sildigimiz için false döndürecektir 
 ```
 
 # Matematik İşlemleri
 
 
 ```js
-const db = require('layon.db')
+const db = require('yunaz.db')
 
-db.math(3,"+",3) //6
-db.math(3,"*",3) //9
+db.math(2,"+",2) //4
+db.math(2,"*",3) //6
 db.math(3,"/",3) //1
 db.math(3,"-",3) //0
 
@@ -63,13 +66,13 @@ db.math(3,"-",3) //0
 
 
 ```js
-db.on("ready",console.log("Hazırım")) //Konsola Hazırım Yazdırır
+db.on("ready",console.log("Database Hazır!")) //Konsola hazırım yazdırır
 
-db.on("ready",db.add("layona","db")) //Database'e Kayıt İşlemi Uygular
+db.on("ready",db.add("yunaz","db")) //Database'e kayıt işlemi uygular
 ```
 
 # Npm
 
 <a href="https://www.npmjs.com/package/layon.db">Npm Linki</a>
-<p>Developed By <a style="color:ORANGE" href="https://discord.com/users/920315243106795570">Layona-x</a>
-<li>Basit Bir Json Modülüdür Geliştiriliyor</li>
+<p>Developed By <a style="color:ORANGE" href="https://discord.com/users/920315243106795570">YunusDEV</a>
+<li>Basit bir database modülüdür ve halen geliştirme aşamasında.</li>
